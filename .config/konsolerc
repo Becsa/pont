@@ -1,0 +1,22 @@
+[Desktop Entry]
+DefaultProfile=Profil 1.profile
+
+[DownloadDialog Settings]
+Window-Maximized 975x1920=true
+
+[Favorite Profiles]
+Favorites=
+
+[MainWindow]
+Height 1200=1175
+Height 975=950
+Height 996=965
+State=AAAA/wAAAAD9AAAAAAAAA7cAAAOxAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=951
+Window-Maximized 1050x1680=true
+Window-Maximized 1200x1920=true
+Window-Maximized 1440x1920=true
+Window-Maximized 600x800=true
+Window-Maximized 975x1920=true
+Window-Maximized 996x1920=true
