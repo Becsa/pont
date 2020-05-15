@@ -2,11 +2,12 @@ call plug#begin('~/vim/vimfiles/plugin')
 Plug 'justinmk/vim-sneak' "inline motion s{char}{char}
 Plug 'PietroPate/vim-tex-conceal' "kiegeszites a latex concelhez
 Plug 'ludovicchabant/vim-gutentags' "tagek latexhez pl
-	set tags=./tags;/
+	autocmd FileType tex,latex setlocal tags=./tags;/
 Plug 'godlygeek/tabular'
 " Plug 'dreadnaut/vim-bargreybars' "gvim ne legyen feher az alja
 " Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs' "zarojel stb parban
+Plug 'markonm/traces.vim'
 Plug 'honza/vim-snippets' "snippetek az ultisnipshez kell
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'liuchengxu/vim-clap' "kereso ablak leader ?
@@ -30,6 +31,7 @@ Plug 'bling/vim-airline' "statusbar
 Plug 'tpope/vim-commentary' "kommenteles
 "Plug 'vifm/vifm.vim'
 " Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter' "track git changes +
 Plug 'SirVer/ultisnips' "makrok
 Plug 'mbbill/undotree' "visszavonasok latszodnak
 Plug 'dhruvasagar/vim-zoom' "ablakba zoomolas
@@ -115,7 +117,7 @@ call plug#end()
 	filetype plugin on
 	syntax on
 	set encoding=utf-8
-	set number relativenumber
+	set number
 	set textwidth=300
 	set foldmethod=marker
 "foldokat megjegyzi a session
@@ -187,7 +189,7 @@ call plug#end()
 "backup kulon mappaban
 	set backup
 	set nowritebackup
-	" set backupdir=$HOME\vim_backup
+	set backupdir=~/vim_backup
 "working directory
 	" command Egyetem cd d:\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\BME\negyedik_felev
 	 command Texsnippets tabnew ~/vim/vimfiles/plugin/vim-snippets/UltiSnips/tex.snippets
