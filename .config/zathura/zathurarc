@@ -1,17 +1,22 @@
-set default-bg "#3c4c55"
 set recolor true
+set default-bg "#3c4c55"
 set recolor-darkcolor "#dcdccc"
 set recolor-lightcolor "#3c4c55"
-set adjust-open "best-fit"
 set smooth-scroll "true"
 set nohlsearch
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
 
 set render-loading "false"
 set scroll-step 50
+set adjust-open "best-fit"
 unmap f
+map i recolor
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
 set synctex true
 set synctex-editor-command "nvr --remote-silent %f -c %l"
 set synctex-editor-command "nvr --remote-silent +%l "%f""
+
