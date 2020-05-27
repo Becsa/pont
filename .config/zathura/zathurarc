@@ -1,7 +1,11 @@
 set recolor true
-set default-bg "#3c4c55"
-set recolor-darkcolor "#dcdccc"
-set recolor-lightcolor "#3c4c55"
+#set default-bg "#3c4c55"
+#set recolor-darkcolor "#dcdccc"
+#set recolor-lightcolor "#3c4c55"
+# _ atlatszo alul sima felul
+set default-bg rgba(60,76,85,0.7)
+set recolor-darkcolor rgba(220,220,204,0)
+set recolor-lightcolor rgba(60,76,85,0.7)
 set smooth-scroll "true"
 set nohlsearch
 set statusbar-h-padding 0

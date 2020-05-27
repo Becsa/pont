@@ -7,10 +7,20 @@ Plug 'godlygeek/tabular'
 " Plug 'dreadnaut/vim-bargreybars' "gvim ne legyen feher az alja
 " Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs' "zarojel stb parban
-Plug 'markonm/traces.vim'
+Plug 'markonm/traces.vim' "search/replace preview
+Plug 'liuchengxu/vim-which-key'
+	set timeoutlen=500
+	nnoremap <silent> <leader>      :<c-u>WhichKey '\'<CR>
+	let g:maplocalleader = ','
+	nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 Plug 'honza/vim-snippets' "snippetek az ultisnipshez kell
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'liuchengxu/vim-clap' "kereso ablak leader ?
+	"vim-clap kereses gyorsbillen
+	nnoremap <leader>? :Clap blines<CR>
+	nnoremap <leader>g :Clap grep<CR>
+	nnoremap <leader>/ :Clap files<CR>
+	nnoremap <leader>v :Clap registers<CR>
 Plug 'dense-analysis/ale' "linting
 Plug 'sainnhe/vim-color-forest-night'
 Plug 'sheerun/vim-polyglot' "nyelv sintax
@@ -31,6 +41,7 @@ Plug 'bling/vim-airline' "statusbar
 Plug 'tpope/vim-commentary' "kommenteles
 "Plug 'vifm/vifm.vim'
 " Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit' "github vimben
 Plug 'airblade/vim-gitgutter' "track git changes +
 Plug 'SirVer/ultisnips' "makrok
 Plug 'mbbill/undotree' "visszavonasok latszodnak
@@ -51,7 +62,7 @@ call plug#end()
 	let g:vimtex_view_general_viewer = 'zathura'
 	let g:vimtex_view_method='zathura'
 	let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-	let g:vimtex_latexmk_progname = 'nvr'
+	let g:vimtex_latexmk_progname = 'nvr' "nvim miatt kell
 	let g:vimtex_quickfix_mode=0
 	let g:polyglot_disabled = ['latex']
 	set conceallevel=2
@@ -70,9 +81,6 @@ call plug#end()
 "markdown
 	let g:vim_markdown_strikethrough = 1
 	let g:vim_markdown_math = 1
-"vim-clap kereses gyorsbillen
-	nnoremap <leader>? :Clap blines<CR>
-	nnoremap <leader>g :Clap grep<CR>
 "coc beallitasok
 	set cmdheight=2
 	set updatetime=300
@@ -191,7 +199,7 @@ call plug#end()
 	set nowritebackup
 	set backupdir=~/vim_backup
 "working directory
-	" command Egyetem cd d:\OneDrive - Kormányzati Informatikai Fejlesztési Ügynökség\BME\negyedik_felev
+	command Egyetem cd /media/sf_megosztott/
 	 command Texsnippets tabnew ~/vim/vimfiles/plugin/vim-snippets/UltiSnips/tex.snippets
 	" command Backslash :s/\\/\//g
 	" command Backslashg :%s/\\/\//g
