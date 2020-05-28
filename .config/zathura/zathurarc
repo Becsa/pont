@@ -8,16 +8,19 @@ set default-bg rgba(60,76,85,0.7)
 set recolor-darkcolor rgba(246,227,188,1)
 # set recolor-lightcolor rgba(255,255,255,0)
 set recolor-lightcolor rgba(60,76,85,0.7)
-# set default-bg rgba(0,0,0,0.7)
-# set recolor-lightcolor rgba(0,0,0,0)
+set highlight-color "#70495d"
+set highlight-active-color "70495d"
 set smooth-scroll "true"
 set nohlsearch
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
+set zoom-center "true"
+set zoom-step 2
 
 # set render-loading "false"
 set scroll-step 50
+set scroll-hstep 5
 set adjust-open "best-fit"
 unmap f
 map i recolor
