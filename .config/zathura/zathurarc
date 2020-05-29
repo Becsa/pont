@@ -6,10 +6,10 @@ set recolor true
 set recolor-keephue "true"
 set default-bg rgba(60,76,85,0.7)
 set recolor-darkcolor rgba(246,227,188,1)
-# set recolor-lightcolor rgba(255,255,255,0)
 set recolor-lightcolor rgba(60,76,85,0.7)
+
 set highlight-color "#70495d"
-set highlight-active-color "70495d"
+set highlight-active-color "#70495d"
 set smooth-scroll "true"
 set nohlsearch
 set statusbar-h-padding 0
@@ -24,8 +24,10 @@ set scroll-hstep 5
 set adjust-open "best-fit"
 unmap f
 map i recolor
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
+map <F1> toggle_fullscreen
+map [fullscreen] <F1> toggle_fullscreen
+map f feedkeys ":set recolor-lightcolor rgba(60,76,85,1)<Return>:set default-bg rgba(60,75,85,1)<Return><F1>"
+map [fullscreen] f feedkeys ":set recolor-lightcolor rgba(59,76,85,0.7)<Return>:set default-bg rgba(60,75,85,0.7)<Return><F1>"
 
 set synctex true
 set synctex-editor-command "nvr --remote-silent %f -c %l"
