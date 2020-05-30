@@ -24,12 +24,13 @@ set scroll-hstep 5
 set adjust-open "best-fit"
 unmap f
 map i recolor
+map [fullscreen] i recolor
 map <F1> toggle_fullscreen
 map [fullscreen] <F1> toggle_fullscreen
 map f feedkeys ":set recolor-lightcolor rgba(60,76,85,1)<Return>:set default-bg rgba(60,75,85,1)<Return><F1>"
 map [fullscreen] f feedkeys ":set recolor-lightcolor rgba(59,76,85,0.7)<Return>:set default-bg rgba(60,75,85,0.7)<Return><F1>"
 
 set synctex true
-set synctex-editor-command "nvr --remote-silent %f -c %l"
+# set synctex-editor-command "nvr --remote-silent %f -c %l"
 set synctex-editor-command "nvr --remote-silent +%l "%f""
 
