@@ -225,8 +225,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; Default font or prioritized list of fonts.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 12.0
+   dotspacemacs-default-font '("Iosevka Term"
+                               :size 13.0
                                :weight normal
                                :width normal)
 
@@ -495,7 +495,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
-             '("gnu" . "http://elpa.gnu.org/packages/"))  
+             '("gnu" . "http://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives
              '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
@@ -548,6 +548,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
    (python . t)
    (latex . t)
    (maxima . t)
+   (dot . t)
    (ipython . t)
    (R . t)
    ))
@@ -591,7 +592,7 @@ before packages are loaded."
   (setq org-bullets-bullet-list (quote ("◉" "◆" "✚" "☀" "○")))
   ;;Megnyitaskor bezarva az org
   (setq org-startup-folded t)
-  
+
   (defengine duckduckgo
   "https://duckduckgo.com/?q=%s"
   :browser 'eww-browse-url
