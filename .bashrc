@@ -119,7 +119,7 @@ export EDITOR=vim;
 #sajat aliasok
 alias emax="emacsclient -nw"
 alias emacsc="emacsclient -c -a emacs"
-alias egyetem="cd /media/sf_megosztott/otodik_felev"
+alias egyetem="cd /media/sf_megosztott/hatodik_felev"
 alias org="cd /media/sf_org-mode"
 alias megosztott="Cd /media/sf_megosztott"
 
