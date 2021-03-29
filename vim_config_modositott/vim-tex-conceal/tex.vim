@@ -19,7 +19,7 @@ if has('conceal')
   syn match texMathSymbol '\\phi\>'        contained conceal cchar=Φ
   syn match texMathSymbol '\\langle\>\s*'  contained conceal cchar=⟨
   syn match texMathSymbol '\s*\\rangle\>'  contained conceal cchar=⟩
-  syn match texMathSymbol '\\\\' contained conceal
+  syn match texMathSymbol '\\\\' contained conceal cchar=↵
 "sajat syntaxok
   syn match texMathSymbol '\\diameter\>' contained conceal cchar=ø
   syn match texMathSymbol '\\sim\>' contained conceal cchar=∼
