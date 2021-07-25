@@ -122,6 +122,7 @@ alias emacsc="emacsclient -c -a emacs"
 alias egyetem="cd /media/sf_megosztott/hatodik_felev"
 alias org="cd /media/sf_org-mode"
 alias megosztott="Cd /media/sf_megosztott"
+alias thesis="Cd /media/sf_megosztott/Szakdolgozat"
 
 # # ex - archive extractor
 # # usage: ex <file>
