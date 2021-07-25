@@ -109,7 +109,7 @@ call plug#end()
 	colorscheme forest-night
 "encode es betutipus
 	set fileencodings=ucs-bom,utf-8,default,latin1
-	set guifont=Iosevka_Term:h13:cEASTEUROPE:qDRAFT
+	set guifont=Iosevka_Term:h14:cEASTEUROPE:qDRAFT
 "helyesiras ellenorzes, csak tex/latex fileokban, magyarul
 	autocmd FileType tex,latex setlocal spell
 	set spelllang=hu
@@ -132,6 +132,7 @@ call plug#end()
 	" set sessionoptions=blank,buffers,folds,tabpages,winsize,terminal
 "file keresesnel feldobja a fileneveket
 	set wildmenu
+	set wildmode=list:longest
 "miket ne dobjon fel
 	set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico,*.svg,*.dwg,*.bak,*.bcf,*.xml,*.blg,*.exe,*.zip,*.swp,*\\tmp\\*,*.rar,*.dxf,*.log,*.fls
 	set wildignore+=*.pdf,*.psd,*.aux
@@ -166,9 +167,9 @@ call plug#end()
 " Automatically deletes all trailing whitespace on save.
 	autocmd BufWritePre * %s/\s\+$//e
 "go to tag
-	map <silent><leader>h <C-]>
+	map <silent><C-g> <C-]>
 "File megnyitasa path alapjan uj ablakban
-	nnoremap gf <C-w>gf
+	" nnoremap gf <C-w>gf
 	vnoremap gf <C-w>gf
 "normalis gf kereses
 	autocmd FileType tex setlocal isfname-={,}
@@ -198,9 +199,12 @@ call plug#end()
 	set backup
 	set nowritebackup
 	set backupdir=~/vim_backup
+	set undofile
+	set undodir=~/vim/vimundo
 "working directory
-	command Egyetem cd /media/sf_megosztott/
-	 command Texsnippets tabnew ~/vim/vimfiles/plugin/vim-snippets/UltiSnips/tex.snippets
+	command Egyetem cd /media/sf_megosztott/hetedik_felev
+	command Texsnippets tabnew ~/vim/vimfiles/plugin/vim-snippets/UltiSnips/tex.snippets
+	command Thesis cd /media/sf_megosztott/Szakdolgozat/Latex
 	" command Backslash :s/\\/\//g
 	" command Backslashg :%s/\\/\//g
 	" command FigureNulla :norm i\setcounter{figure}{0}\setcounter{subfigure}{0}
