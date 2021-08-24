@@ -168,6 +168,8 @@ call plug#end()
 	map <C-l> <C-w>l
 " Automatically deletes all trailing whitespace on save.
 	autocmd BufWritePre * %s/\s\+$//e
+" Automatikus ctags ha elmentem a bib filet
+	autocmd BufWritePost *.bib call system("ctags -R")
 "go to tag
 	map <silent><C-g> <C-]>
 "File megnyitasa path alapjan uj ablakban
