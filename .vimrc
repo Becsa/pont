@@ -2,7 +2,8 @@ call plug#begin('~/vim/vimfiles/plugin')
 Plug 'justinmk/vim-sneak' "inline motion s{char}{char}
 Plug 'PietroPate/vim-tex-conceal' "kiegeszites a latex concelhez
 Plug 'ludovicchabant/vim-gutentags' "tagek latexhez pl
-	autocmd FileType tex,latex setlocal tags=./tags;/
+	autocmd FileType tex,latex,bib,bitex,biber "setlocal tags=./tags;/
+	set tags=./tags,/media/sf_megosztott/preambulum/bibliography/tags,./TAGS,tags;~,TAGS;~;
 Plug 'godlygeek/tabular'
 " Plug 'dreadnaut/vim-bargreybars' "gvim ne legyen feher az alja
 " Plug 'plasticboy/vim-markdown'
@@ -21,6 +22,7 @@ Plug 'liuchengxu/vim-clap' "kereso ablak leader ?
 	nnoremap <leader>g :Clap grep<CR>
 	nnoremap <leader>/ :Clap files<CR>
 	nnoremap <leader>v :Clap registers<CR>
+	nnoremap <leader>a :Clap windows<CR>
 Plug 'dense-analysis/ale' "linting
 Plug 'sainnhe/vim-color-forest-night'
 Plug 'sheerun/vim-polyglot' "nyelv sintax
@@ -169,7 +171,7 @@ call plug#end()
 "go to tag
 	map <silent><C-g> <C-]>
 "File megnyitasa path alapjan uj ablakban
-	" nnoremap gf <C-w>gf
+	nnoremap gf <C-w>gf
 	vnoremap gf <C-w>gf
 "normalis gf kereses
 	autocmd FileType tex setlocal isfname-={,}
