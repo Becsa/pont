@@ -51,7 +51,8 @@ bspc monitor --reset-desktops       7 8 9 10
 bspc rule -a "*:*" #split_dir=east
 bspc rule -a Guake state=floating  focus=on sticky=on
 bspc rule -a Emacs state=tiled focus=on desktop='' follow=on
-bspc rule -a Zathura state=tiled split_ratio=0.65 #split_dir=east
+bspc rula -a WriteTeX state=floating focus=on
+bspc rule -a Zathura state=tiled split_ratio=0.63 #split_dir=east 0.65 jol mukodik csak kicsi
 bspc rule -a screenkey --unmanage
 bspc rule -a gcolor2 state=floating center=true
 bspc rule -a lxappearance state=floating center=true
@@ -62,10 +63,11 @@ bspc rule -a spotify state=pseudo_tiled
 bspc rule -a file-roller state=pseudo_tiled
 bspc rule -a transmission-gtk state=pseudo_tiled
 bspc rule -a firefox desktop='' follow=on
-bspc rule -a libreoffice state=tiled
+bspc rule -a libreoffice state=tiled desktop='' follow=on
 bspc rule -a '*:libreofficedev' state=tiled
 bspc rule -a '*:soffice' state=tiled
-bspc rule -a Inkscape state=tiled focus=on desktop='' follow=on
+bspc rule -a Inkscape  focus=on desktop='' follow=on
+bspc rule -a WriteTeX state=floating focus=on desktop='' follow=on
 bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
 
