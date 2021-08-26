@@ -8,8 +8,10 @@ set default-bg rgba(60,76,85,0.7)
 set recolor-darkcolor rgba(246,227,188,1)
 set recolor-lightcolor rgba(60,76,85,0.7)
 
-set highlight-color "#70495d"
-set highlight-active-color "#70495d"
+# set highlight-color "#70495d"
+set highlight-color "#d1f3ff"
+# set highlight-active-color "#70495d"
+set highlight-active-color "#fff1d4"
 set smooth-scroll "true"
 set nohlsearch
 set statusbar-h-padding 0
