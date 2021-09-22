@@ -23,6 +23,7 @@ Plug 'liuchengxu/vim-clap' "kereso ablak leader ?
 	nnoremap <leader>/ :Clap files<CR>
 	nnoremap <leader>v :Clap registers<CR>
 	nnoremap <leader>a :Clap windows<CR>
+	nnoremap <leader>C :Clap providers<CR>
 Plug 'dense-analysis/ale' "linting
 Plug 'sainnhe/vim-color-forest-night'
 Plug 'sheerun/vim-polyglot' "nyelv sintax
