@@ -523,7 +523,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 (setq org-todo-keywords
       '((sequence "TODO" "KÉRDÉS" "FOLYAMATBAN" "CANCELLED" "|" "DONE" )))
 (setq org-todo-keyword-faces
-      '(("TODO" . "orange") ("KÉRDÉS" . "magenta") ("FOLYAMATBAN" . "magenta") ("CANCELLED" . "red") ("DONE" . "green")))
+      '(("TODO" . "orange") ("KÉRDÉS" . "magenta") ("FOLYAMATBAN" . "blue") ("CANCELLED" . "red") ("DONE" . "green")))
 (setq org-remember-clock-out-on-exit t)
 (setq org-clock-clocked-in-display (quote both))
 
