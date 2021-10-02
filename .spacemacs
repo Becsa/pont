@@ -521,9 +521,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 (global-set-key (kbd "C-c m o") #'my-org-open-at-point)
 
 (setq org-todo-keywords
-      '((sequence "TODO" "KÉRDÉS" "FOLYAMATBAN" "CANCELLED" "|" "DONE" )))
+      '((sequence "TODO" "KÉRDÉS" "FOLYAMATBAN" "VÁRAKOZIK" "CANCELLED" "|" "DONE" )))
 (setq org-todo-keyword-faces
-      '(("TODO" . "orange") ("KÉRDÉS" . "magenta") ("FOLYAMATBAN" . "blue") ("CANCELLED" . "red") ("DONE" . "green")))
+      '(("TODO" . "orange") ("KÉRDÉS" . "magenta") ("FOLYAMATBAN" . "blue") ("VÁRAKOZIK" . "yellow") ("CANCELLED" . "red") ("DONE" . "green")))
 (setq org-remember-clock-out-on-exit t)
 (setq org-clock-clocked-in-display (quote both))
 
@@ -612,6 +612,12 @@ before packages are loaded."
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 (add-hook 'python-mode-hook 'company-mode)
+
+(defun add-pcomplete-to-capf ()
+  (add-hook 'completion-at-point-functions 'pcomplete-completions-at-point nil t))
+
+(add-hook 'org-mode-hook #'add-pcomplete-to-capf)
+(add-hook 'org-mode-hook 'company-mode)
 ;; (add-hook 'python-mode-hook 'jedi-mode)
 ;;soronkent menjen a j es k
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
